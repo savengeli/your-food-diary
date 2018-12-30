@@ -13,7 +13,7 @@ import {
 } from './types';
 import axios from 'axios';
 
-const ROOT_URL = 'http://api.nal.usda.gov/ndb/V2/reports';
+const ROOT_URL = 'https://api.nal.usda.gov/ndb/V2/reports';
 const ROOT_URL2 = 'https://api.nal.usda.gov/ndb/search';
 
 // Get the search results from the database:
