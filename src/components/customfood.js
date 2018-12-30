@@ -76,7 +76,7 @@ class CustomFood extends Component {
                             </td>
                         </tr>
                         <tr>
-                            <td>Kalories: </td>
+                            <td>Calories: </td>
                             <td>
                                 <Input
                                     label={{ basic: true, content: 'kcal/100 g' }}
