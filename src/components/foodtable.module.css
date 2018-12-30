@@ -1,0 +1,17 @@
+.FoodTable {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 13px;
+    background-color: white;
+    border-radius: 20px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.EmptyTable {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    width: 700px;
+    height: 150px;
+}
