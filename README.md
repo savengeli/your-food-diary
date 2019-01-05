@@ -1,3 +1,17 @@
+Your food diary was created as a react demo project.
+
+See it in action: https://angry-sammet-201443.netlify.com/
+
+Your food diary lets the user to calculate calories, macronutrients and sugars of the foods they have added to the diary. User can search food from the USDA Food Composition Databases using the search field or add their custom food (which is an important feature because all foods are not found in the databases). The food that user has selected is added to the food diary which is displayed as a table. Foods can be removed one by one from the diary. User can change the amount of food to calculate the nutrients for that amount. The total amount of calories and nutrients of all foods is shown in the table footer.
+
+Future ideas
+
+The next step would be a diagram showing the ratios of the macronutrients i.e. Proteins, Carbohydrates and Fats. This could be useful for a user who is, for example, building muscle or dieting and is aiming to a certain percentage of macronutrients in their daily calorie intake.
+
+Since this is a front-end demo project there is no database to save user's food diary. Adding a sign-in button and ability to save data would make the app much more usable.
+
+-------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
