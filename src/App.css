@@ -6,6 +6,8 @@
   position: relative;
   min-height: 700px;
   display: block;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 .contents {
