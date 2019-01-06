@@ -12,7 +12,7 @@ import {
     ADD_CUSTOM_FOOD,
 } from '../actions/types'
 
-const API_KEY = 'QQUpfsc4c3KzCh8gANddt9WpdODcF2fVtLnzAUJk';
+const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 
 const initState = {
     // parameters to find food info:
