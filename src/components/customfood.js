@@ -59,103 +59,14 @@ class CustomFood extends Component {
                                 />
                             </td>
                         </tr>
-                        <tr>
-                            <td>Amount:</td>
-                            <td>
-                                <Input
-                                    label={{ basic: true, content: 'grams' }}
-                                    labelPosition='right'
-                                    className="ui input"
-                                    type="text"
-                                    value={this.state.amount}
-                                    name="amount"
-                                    onChange={this.onFormChange}
-                                    maxLength="4"
-                                    size="tiny"
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Calories: </td>
-                            <td>
-                                <Input
-                                    label={{ basic: true, content: 'kcal/100 g' }}
-                                    labelPosition='right'
-                                    className="ui input"
-                                    type="text"
-                                    value={this.state.kcal}
-                                    name="kcal"
-                                    onChange={this.onFormChange}
-                                    maxLength="7"
-                                    size="tiny"
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Fat:</td>
-                            <td>
-                                <Input
-                                    label={{ basic: true, content: 'grams/100 g' }}
-                                    labelPosition='right'
-                                    className="ui input"
-                                    type="text"
-                                    value={this.state.fat}
-                                    name="fat"
-                                    onChange={this.onFormChange}
-                                    maxLength="5"
-                                    size="tiny"
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Protein: </td>
-                            <td>
-                                <Input
-                                    label={{ basic: true, content: 'grams/100 g' }}
-                                    labelPosition='right'
-                                    className="ui input"
-                                    type="text"
-                                    value={this.state.prot}
-                                    name="prot"
-                                    onChange={this.onFormChange}
-                                    maxLength="5"
-                                    size="tiny"
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Carbonhydrates:</td>
-                            <td>
-                                <Input
-                                    label={{ basic: true, content: 'grams/100 g' }}
-                                    labelPosition='right'
-                                    className="ui input"
-                                    type="text"
-                                    value={this.state.carbs}
-                                    name="carbs"
-                                    onChange={this.onFormChange}
-                                    maxLength="5"
-                                    size="tiny"
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Sugars: </td>
-                            <td>
-                                <Input
-                                    label={{ basic: true, content: 'grams/100 g' }}
-                                    labelPosition='right'
-                                    className="ui input"
-                                    type="text"
-                                    value={this.state.sugar}
-                                    name="sugar"
-                                    onChange={this.onFormChange}
-                                    maxLength="5"
-                                    size="tiny"
-                                />
-                            </td>
-                        </tr>
-                    </tbody></table> <p className="warn">{this.state.warning}</p>
+                        {this.inputField("Amount", this.state.amount, "amount", 'grams', "4")}      
+                        {this.inputField("Calories", this.state.kcal, "kcal", 'kcal/100 g', "7")}                                    
+                        {this.inputField("Fat", this.state.fat, "fat", 'grams/100 g', "5")}
+                        {this.inputField("Protein", this.state.prot, "prot", 'grams/100 g', "5")}
+                        {this.inputField("Carbonhydrates", this.state.carbs, "carbs", 'grams/100 g', "5")}
+                        {this.inputField("Sugars", this.state.sugar, "sugar", 'grams/100 g', "5")}
+                    </tbody></table> 
+                    <p className="warn">{this.state.warning}</p>
                     {!this.state.name || !this.state.amount ?
                         <p className="requirements">
                             You need to fill in at least Food name<br />
@@ -180,6 +91,28 @@ class CustomFood extends Component {
                 </Modal.Actions>
             </Modal>
         )
+    }
+
+    // Use this function to create the input fields
+    inputField = (heading,value,name,labelText,length) => {
+        return (
+            <tr>
+                <td>{heading}:</td>
+                <td>
+                <Input
+                    label={{ basic: true, content: labelText }}
+                    labelPosition='right'
+                    className="ui input"
+                    type="text"
+                    value={value}
+                    name={name}
+                    onChange={this.onFormChange}
+                    maxLength={length}
+                    size="tiny"
+                />
+                </td>
+            </tr>
+        );
     }
 
     onFormChange = (event) => {
